@@ -1,6 +1,7 @@
 extends KinematicBody2D
 
-const Util = preload("res://scripts/util.gd")
+var Util = preload("res://scripts/util.gd")
+var tile_size = Util.tile_size
 var velocity: Vector2
 var speed: int = 100
 var color = Util.Colors.NO_COLOR
@@ -25,7 +26,7 @@ func _physics_process(_delta: float) -> void:
 	if velocity != Vector2.ZERO:
 		animation_player.play("walk")
 	else:
-		position = position.snapped(Vector2(8, 8))
+		position = position.snapped(Vector2(tile_size / 2, tile_size / 2))
 		animation_player.play("idle")
 
 	if velocity.x > 0:
@@ -35,4 +36,10 @@ func _physics_process(_delta: float) -> void:
 
 func change_color(new_color) -> void:
 	sprite.texture = sprites[new_color]
+	set_collision_mask_bit(new_color + 2, false)
+	if color != Util.Colors.NO_COLOR:
+		set_collision_mask_bit(color + 2, true)
 	color = new_color
+
+func get_color():
+	return color
