@@ -51,9 +51,9 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func change_color(new_color) -> void:
 	sprite.texture = sprites[new_color]
-	ray_cast.set_collision_mask_bit(new_color + 2, false)
+	ray_cast.set_collision_mask_bit(new_color + 3, false)
 	if color != Util.Colors.NO_COLOR:
-		ray_cast.set_collision_mask_bit(color + 2, true)
+		ray_cast.set_collision_mask_bit(color + 3, true)
 	color = new_color
 
 func get_color():
