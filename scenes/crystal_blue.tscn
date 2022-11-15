@@ -9,6 +9,7 @@ extents = Vector2( 6, 6 )
 [node name="CrystalBlue" type="Area2D"]
 collision_layer = 4
 script = ExtResource( 2 )
+color = 1
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
