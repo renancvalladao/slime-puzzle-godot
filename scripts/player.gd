@@ -2,6 +2,12 @@ extends KinematicBody2D
 
 var Util = preload("res://scripts/util.gd")
 var tile_size = Util.tile_size
+var inputs = {
+	"ui_right": Vector2.RIGHT,
+	"ui_left": Vector2.LEFT,
+	"ui_up": Vector2.UP,
+	"ui_down": Vector2.DOWN
+}
 var velocity: Vector2
 var speed: int = 100
 var color = Util.Colors.NO_COLOR
@@ -12,16 +18,19 @@ var sprites = {
 }
 onready var animation_player: AnimationPlayer = $AnimationPlayer
 onready var sprite: Sprite = $Sprite
+onready var ray_cast: RayCast2D = $RayCast2D
 
 func _physics_process(_delta: float) -> void:
-	if velocity == Vector2.ZERO:
-		var direction_vector: Vector2 = Vector2(
-			Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left"),
-			Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")
-		)
-		velocity = direction_vector * speed
+	if velocity.x > 0:
+		sprite.flip_h = false
+	elif velocity.x < 0:
+		sprite.flip_h = true
 	
-	velocity = move_and_slide(velocity)
+	if ray_cast.is_colliding():
+		velocity = Vector2.ZERO
+		position = position.snapped(Vector2(tile_size / 2, tile_size / 2))
+	else:
+		velocity = move_and_slide(velocity)
 	
 	if velocity != Vector2.ZERO:
 		animation_player.play("walk")
@@ -29,16 +38,22 @@ func _physics_process(_delta: float) -> void:
 		position = position.snapped(Vector2(tile_size / 2, tile_size / 2))
 		animation_player.play("idle")
 
-	if velocity.x > 0:
-		sprite.flip_h = false
-	elif velocity.x < 0:
-		sprite.flip_h = true
+func _unhandled_input(event: InputEvent) -> void:
+	if velocity != Vector2.ZERO:
+		return
+	
+	for direction in inputs.keys():
+		if event.is_action_pressed(direction):
+			var move_direction: Vector2 = inputs[direction]
+			ray_cast.position = move_direction * (tile_size / 2)
+			ray_cast.cast_to = move_direction
+			velocity = move_direction * speed
 
 func change_color(new_color) -> void:
 	sprite.texture = sprites[new_color]
-	set_collision_mask_bit(new_color + 2, false)
+	ray_cast.set_collision_mask_bit(new_color + 2, false)
 	if color != Util.Colors.NO_COLOR:
-		set_collision_mask_bit(color + 2, true)
+		ray_cast.set_collision_mask_bit(color + 2, true)
 	color = new_color
 
 func get_color():
