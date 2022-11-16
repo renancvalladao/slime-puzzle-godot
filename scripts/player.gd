@@ -30,7 +30,6 @@ func _physics_process(_delta: float) -> void:
 	if velocity != Vector2.ZERO:
 		animation_player.play("walk")
 	else:
-		position = position.snapped(Vector2(tile_size / 2, tile_size / 2))
 		animation_player.play("idle")
 
 func _unhandled_input(event: InputEvent) -> void:
