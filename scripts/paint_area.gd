@@ -4,7 +4,7 @@ var Util = preload("res://scripts/util.gd")
 var splatter = preload("res://scenes/splatter.tscn")
 
 func _ready():
-	connect("body_entered", self, "_body_entered")
+	var _connect = connect("body_entered", self, "_body_entered")
 
 func _body_entered(other: Node):
 	if (other.has_method("get_color")):
