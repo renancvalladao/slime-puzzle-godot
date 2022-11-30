@@ -9,7 +9,8 @@ var color = Util.Colors.NO_COLOR
 var sprites = {
 	Util.Colors.NO_COLOR: preload("res://assets/slime_no_color.png"),
 	Util.Colors.BLUE: preload("res://assets/slime_blue.png"),
-	Util.Colors.ORANGE: preload("res://assets/slime_orange.png")
+	Util.Colors.ORANGE: preload("res://assets/slime_orange.png"),
+	Util.Colors.YELLOW: preload("res://assets/slime_yellow.png")
 }
 onready var animation_player: AnimationPlayer = $AnimationPlayer
 onready var sprite: Sprite = $Sprite
