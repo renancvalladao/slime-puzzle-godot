@@ -6,6 +6,12 @@ var tile_size = Util.tile_size
 var velocity: Vector2
 var speed: int = 100
 var color = Util.Colors.NO_COLOR
+var inputs = {
+	"ui_right": Vector2.RIGHT,
+	"ui_left": Vector2.LEFT,
+	"ui_up": Vector2.UP,
+	"ui_down": Vector2.DOWN
+}
 var sprites = {
 	Util.Colors.NO_COLOR: preload("res://assets/slime_no_color.png"),
 	Util.Colors.BLUE: preload("res://assets/slime_blue.png"),
@@ -36,6 +42,13 @@ func _physics_process(_delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if velocity != Vector2.ZERO:
 		return
+	
+	for direction in inputs.keys():
+		if event.is_action_pressed(direction):
+			var move_direction: Vector2 = inputs[direction]
+			ray_cast.position = move_direction * (tile_size / 2)
+			ray_cast.cast_to = move_direction
+			velocity = move_direction * speed
 
 	if event is InputEventScreenDrag:
 		var relative: Vector2 = event.get_relative()
