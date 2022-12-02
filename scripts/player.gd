@@ -71,8 +71,8 @@ func change_color(new_color) -> void:
 	if color == new_color:
 		return
 	if color == Util.Colors.NO_COLOR:
-		for colour in Util.Colors:
-			ray_cast.set_collision_mask_bit(Util.Colors[colour] + 3, true)
+		for utilColor in Util.Colors:
+			ray_cast.set_collision_mask_bit(Util.Colors[utilColor] + 3, true)
 	sprite.texture = sprites[new_color]
 	ray_cast.set_collision_mask_bit(new_color + 3, false)
 	if color != Util.Colors.NO_COLOR:
