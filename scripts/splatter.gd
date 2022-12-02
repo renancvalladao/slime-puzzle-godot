@@ -11,6 +11,7 @@ export(Util.Colors) var init_color
 
 func _ready():
 	if init_color != Util.Colors.NO_COLOR:
+		add_to_group("not_paintable")
 		set_color(init_color)
 		var _connect = connect("body_entered", self, "_body_entered")
 
