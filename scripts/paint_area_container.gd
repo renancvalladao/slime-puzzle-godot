@@ -8,7 +8,7 @@ export(Vector2) var bottom_right
 
 func _ready():
 	var notPaintables = get_tree().get_nodes_in_group("not_paintable")
-	var exceptions: PoolVector2Array
+	var exceptions: PoolVector2Array = []
 	for notPaintable in notPaintables:
 		exceptions.append(notPaintable.position)
 	for x in range(top_left.x, bottom_right.x + tile_size, tile_size):
