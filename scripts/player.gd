@@ -68,6 +68,8 @@ func _unhandled_input(event: InputEvent) -> void:
 		velocity = move_direction * speed
 
 func change_color(new_color) -> void:
+	if color == new_color:
+		return
 	sprite.texture = sprites[new_color]
 	ray_cast.set_collision_mask_bit(new_color + 3, false)
 	if color != Util.Colors.NO_COLOR:
