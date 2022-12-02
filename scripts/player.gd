@@ -18,6 +18,7 @@ var sprites = {
 	Util.Colors.ORANGE: preload("res://assets/slime_orange.png"),
 	Util.Colors.YELLOW: preload("res://assets/slime_yellow.png")
 }
+var dead = false
 onready var animation_player: AnimationPlayer = $AnimationPlayer
 onready var sprite: Sprite = $Sprite
 onready var ray_cast: RayCast2D = $RayCast2D
@@ -33,7 +34,8 @@ func _physics_process(_delta: float) -> void:
 		position = position.snapped(Vector2(tile_size / 2, tile_size / 2))
 	else:
 		velocity = move_and_slide(velocity)
-	
+	if dead:
+		return
 	if velocity != Vector2.ZERO:
 		animation_player.play("walk")
 	else:
@@ -74,3 +76,12 @@ func change_color(new_color) -> void:
 
 func get_color():
 	return color
+
+func die():
+	dead = true
+	velocity /= 5
+	animation_player.play("dead")
+	
+func _on_AnimationPlayer_animation_finished(anim_name):
+	if anim_name == "dead":
+		queue_free()
