@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scenes/floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/stone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/fence.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/paint_area_container.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 65, 4 )
+
+[node name="Level" type="Node2D"]
+position = Vector2( -8, -24 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 80.0, 160.0 ],
+"_edit_vertical_guides_": [ 8.0, 80.0 ]
+}
+
+[node name="Floor" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 32 )
+tile_data = PoolIntArray( 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 196612, 4, 0, 196613, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262149, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 393217, 4, 0, 393218, 4, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 458753, 4, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0 )
+
+[node name="Fence" parent="." instance=ExtResource( 4 )]
+position = Vector2( 16, 48 )
+tile_data = PoolIntArray( -65536, 0, 1, -65535, 0, 196610, -65534, 0, 196610, -65533, 0, 196610, -65532, 0, 3, 0, 0, 65536, 4, 0, 65536, 65536, 0, 65536, 65540, 0, 65536, 131072, 0, 65536, 131076, 0, 65536, 196608, 0, 65536, 196612, 0, 65536, 262144, 0, 65536, 262148, 0, 65536, 327680, 0, 65536, 327684, 0, 65536, 393216, 0, 131073, 393217, 0, 196610, 393218, 0, 196610, 393219, 0, 196610, 393220, 0, 131075 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 56, 96 )
+current = true
+
+[node name="Stone" parent="." instance=ExtResource( 2 )]
+position = Vector2( 56, 96 )
+
+[node name="BorderNorth" type="StaticBody2D" parent="."]
+position = Vector2( 0, -40 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BorderNorth"]
+position = Vector2( 55, 72 )
+shape = SubResource( 1 )
+
+[node name="Coin" parent="." instance=ExtResource( 7 )]
+position = Vector2( 56, 56 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 56, 136 )
+
+[node name="PaintAreaContainer" parent="." instance=ExtResource( 6 )]
+top_left = Vector2( 8, 8 )
+bottom_right = Vector2( 112, 152 )

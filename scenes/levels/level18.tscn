@@ -1,0 +1,295 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scenes/floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/stone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/crystal_blue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/crystal_orange.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/paint_area_container.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/fence.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/splatter.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/crystal_yellow.tscn" type="PackedScene" id=10]
+
+[node name="Level2" type="Node2D"]
+
+[node name="Floor" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -196608, 4, 0, -196607, 4, 0, -196605, 4, 0, -196604, 4, 0, -196602, 4, 0, -196601, 4, 0, -65537, 4, 0, -131072, 4, 0, -131071, 4, 0, -131070, 4, 0, -131069, 4, 0, -131068, 4, 0, -131067, 4, 0, -131066, 4, 0, -131065, 4, 0, -131064, 4, 0, -1, 4, 0, -65536, 4, 0, -65535, 4, 0, -65534, 4, 0, -65533, 4, 0, -65532, 4, 0, -65531, 4, 0, -65530, 4, 0, -65529, 4, 0, -65528, 4, 0, 65535, 4, 0, 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 8, 4, 0, 131071, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65544, 4, 0, 196606, 4, 0, 196607, 4, 0, 131080, 4, 0, 131081, 4, 0, 262142, 4, 0, 262143, 4, 0, 196616, 4, 0, 196617, 4, 0, 327678, 4, 0, 327679, 4, 0, 262152, 4, 0, 262153, 4, 0, 393214, 4, 0, 393215, 4, 0, 327680, 4, 0, 327687, 4, 0, 327688, 4, 0, 327689, 4, 0, 458750, 4, 0, 458751, 4, 0, 393216, 4, 0, 393219, 4, 0, 393220, 4, 0, 393223, 4, 0, 393224, 4, 0, 393225, 4, 0, 524286, 4, 0, 524287, 4, 0, 458752, 4, 0, 458753, 4, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458760, 4, 0, 458761, 4, 0, 589822, 4, 0, 589823, 4, 0, 524288, 4, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 524292, 4, 0, 524293, 4, 0, 524294, 4, 0, 524295, 4, 0, 524296, 4, 0, 524297, 4, 0, 655358, 4, 0, 655359, 4, 0, 589824, 4, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 720893, 4, 0, 720894, 4, 0, 720895, 4, 0, 655360, 4, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0, 786431, 4, 0, 720896, 4, 0, 720897, 4, 0, 720898, 4, 0, 720899, 4, 0, 720900, 4, 0, 720901, 4, 0, 720902, 4, 0, 720903, 4, 0, 720904, 4, 0, 786432, 4, 0, 786433, 4, 0, 786434, 4, 0, 786435, 4, 0, 786436, 4, 0, 786437, 4, 0, 786438, 4, 0, 786439, 4, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 64, 72 )
+current = true
+
+[node name="Stone11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 56, -40 )
+
+[node name="Stone12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 88 )
+
+[node name="Stone9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 104, 152 )
+
+[node name="Stone16" parent="." instance=ExtResource( 2 )]
+position = Vector2( 136, 40 )
+
+[node name="Stone19" parent="." instance=ExtResource( 2 )]
+position = Vector2( 24, 56 )
+
+[node name="Stone20" parent="." instance=ExtResource( 2 )]
+position = Vector2( 104, 56 )
+
+[node name="Stone7" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 88 )
+
+[node name="Stone10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 72, -40 )
+
+[node name="Stone8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 136, 184 )
+
+[node name="Stone3" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8, 184 )
+
+[node name="Stone5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 24, 152 )
+
+[node name="Stone4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 88, 8 )
+
+[node name="Stone13" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8, 40 )
+
+[node name="Stone23" parent="." instance=ExtResource( 2 )]
+position = Vector2( 88, 104 )
+
+[node name="Stone24" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, 104 )
+
+[node name="Stone14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, 200 )
+
+[node name="Stone15" parent="." instance=ExtResource( 2 )]
+position = Vector2( 88, 200 )
+
+[node name="Stone6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, 8 )
+
+[node name="Stone18" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, -24 )
+
+[node name="Stone25" parent="." instance=ExtResource( 2 )]
+position = Vector2( -40, 168 )
+
+[node name="Stone26" parent="." instance=ExtResource( 2 )]
+position = Vector2( 168, 168 )
+
+[node name="Stone27" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 200 )
+
+[node name="Stone28" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 200 )
+
+[node name="Stone21" parent="." instance=ExtResource( 2 )]
+position = Vector2( 72, 56 )
+
+[node name="Stone22" parent="." instance=ExtResource( 2 )]
+position = Vector2( 56, 56 )
+
+[node name="Stone17" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, -24 )
+
+[node name="CrystalBlue" parent="." instance=ExtResource( 4 )]
+position = Vector2( 72, 24 )
+
+[node name="CrystalBlue3" parent="." instance=ExtResource( 4 )]
+position = Vector2( 152, 88 )
+
+[node name="CrystalBlue2" parent="." instance=ExtResource( 4 )]
+position = Vector2( -24, 168 )
+
+[node name="CrystalOrange2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 56, 24 )
+
+[node name="CrystalOrange4" parent="." instance=ExtResource( 5 )]
+position = Vector2( -24, 88 )
+
+[node name="CrystalOrange3" parent="." instance=ExtResource( 5 )]
+position = Vector2( 152, 168 )
+
+[node name="CrystalYellow" parent="." instance=ExtResource( 10 )]
+position = Vector2( 72, 120 )
+
+[node name="CrystalYellow3" parent="." instance=ExtResource( 10 )]
+position = Vector2( 56, 120 )
+
+[node name="Coin2" parent="." instance=ExtResource( 7 )]
+position = Vector2( -8, 56 )
+
+[node name="Coin4" parent="." instance=ExtResource( 7 )]
+position = Vector2( 64, -8 )
+
+[node name="Coin3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 136, 56 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( -8, -8 )
+
+[node name="Fence" parent="." instance=ExtResource( 8 )]
+tile_data = PoolIntArray( -196608, 0, 196609, -196607, 0, 196611, -196602, 0, 196609, -196601, 0, 196611, -65537, 0, 196608, -131064, 0, 196608, -65534, 0, 196608, -65531, 0, 196608, 196606, 0, 196608, 131081, 0, 196608 )
+
+[node name="PaintAreaContainer" parent="." instance=ExtResource( 6 )]
+top_left = Vector2( -24, -56 )
+bottom_right = Vector2( 168, 200 )
+
+[node name="Splatter" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 24, 168 )
+init_color = 2
+
+[node name="Splatter13" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 56, 152 )
+init_color = 2
+
+[node name="Splatter2" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 56, 40 )
+init_color = 2
+
+[node name="Splatter3" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 72, 152 )
+monitoring = false
+init_color = 1
+
+[node name="Splatter6" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 24, 24 )
+init_color = 2
+
+[node name="Splatter14" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 24, 40 )
+init_color = 2
+
+[node name="Splatter30" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 40, 40 )
+init_color = 2
+
+[node name="Splatter15" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 8, 40 )
+init_color = 2
+
+[node name="Splatter16" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 8, 56 )
+init_color = 2
+
+[node name="Splatter17" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 8, 72 )
+init_color = 2
+
+[node name="Splatter18" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 24, 72 )
+init_color = 2
+
+[node name="Splatter19" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 40, 72 )
+init_color = 2
+
+[node name="Splatter20" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 56, 72 )
+init_color = 2
+
+[node name="Splatter21" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 56, 88 )
+init_color = 2
+
+[node name="Splatter12" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 8, 104 )
+init_color = 1
+
+[node name="Splatter33" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 120, 104 )
+init_color = 2
+
+[node name="Splatter34" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 136, 120 )
+init_color = 2
+
+[node name="Splatter42" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 136, 72 )
+init_color = 2
+
+[node name="Splatter32" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( -8, 120 )
+init_color = 1
+
+[node name="Splatter41" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( -8, 72 )
+init_color = 1
+
+[node name="Splatter10" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 72, 40 )
+init_color = 1
+
+[node name="Splatter5" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 72, 88 )
+init_color = 1
+
+[node name="Splatter22" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 72, 72 )
+init_color = 1
+
+[node name="Splatter23" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 88, 72 )
+init_color = 1
+
+[node name="Splatter24" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 104, 72 )
+init_color = 1
+
+[node name="Splatter25" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 120, 72 )
+init_color = 1
+
+[node name="Splatter26" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 120, 56 )
+init_color = 1
+
+[node name="Splatter27" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 120, 40 )
+init_color = 1
+
+[node name="Splatter28" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 104, 40 )
+init_color = 1
+
+[node name="Splatter31" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 88, 40 )
+init_color = 1
+
+[node name="Splatter29" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 104, 24 )
+init_color = 1
+
+[node name="Splatter9" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 104, 168 )
+init_color = 1
+
+[node name="Splatter7" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 104, 136 )
+init_color = 2
+
+[node name="Splatter4" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 24, 136 )
+init_color = 1
+
+[node name="Splatter35" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 8, 152 )
+init_color = 1
+
+[node name="Splatter37" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( -24, 136 )
+init_color = 1
+
+[node name="Splatter38" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 152, 136 )
+init_color = 2
+
+[node name="Splatter36" parent="PaintAreaContainer" instance=ExtResource( 9 )]
+position = Vector2( 120, 152 )
+init_color = 2

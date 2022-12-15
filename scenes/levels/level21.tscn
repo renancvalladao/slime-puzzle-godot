@@ -1,0 +1,155 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scenes/floor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/stone.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/player.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/crystal_blue.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/crystal_orange.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/paint_area_container.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/fence.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/splatter.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/crystal_yellow.tscn" type="PackedScene" id=10]
+
+[node name="Level2" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [ 128.0, 112.0, 176.0, 96.0, 80.0, 144.0, 160.0 ],
+"_edit_vertical_guides_": [ 48.0, 64.0, -16.0, 128.0, 0.0, 112.0, 32.0, 80.0 ]
+}
+
+[node name="Floor" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( -65530, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 65538, 4, 0, 65541, 4, 0, 65542, 4, 0, 196607, 4, 0, 131072, 4, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 4, 0, 131079, 4, 0, 262143, 4, 0, 196608, 4, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 196612, 4, 0, 196613, 4, 0, 196614, 4, 0, 196615, 4, 0, 327679, 4, 0, 262144, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262149, 4, 0, 262150, 4, 0, 262151, 4, 0, 262152, 4, 0, 393215, 4, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 327689, 4, 0, 458751, 4, 0, 393216, 4, 0, 393217, 4, 0, 393218, 4, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 393224, 4, 0, 393225, 4, 0, 393226, 4, 0, 524287, 4, 0, 458752, 4, 0, 458753, 4, 0, 458754, 4, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 458761, 4, 0, 589820, 4, 0, 589821, 4, 0, 589822, 4, 0, 589823, 4, 0, 524288, 4, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 524292, 4, 0, 524293, 4, 0, 524294, 4, 0, 524295, 4, 0, 524296, 4, 0, 524297, 4, 0, 524298, 4, 0, 655356, 4, 0, 655357, 4, 0, 655358, 4, 0, 655359, 4, 0, 589824, 4, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589832, 4, 0, 589833, 4, 0, 589834, 4, 0, 720891, 4, 0, 720892, 4, 0, 720893, 4, 0, 720894, 4, 0, 720895, 4, 0, 655360, 4, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 655366, 4, 0, 655367, 4, 0, 655368, 4, 0, 655369, 4, 0, 655370, 4, 0, 786429, 4, 0, 786431, 4, 0, 720896, 4, 0, 720897, 4, 0, 720898, 4, 0, 720899, 4, 0, 720900, 4, 0, 720901, 4, 0, 720902, 4, 0, 720903, 4, 0, 720904, 4, 0, 720905, 4, 0, 786432, 4, 0, 786433, 4, 0, 786434, 4, 0, 786435, 4, 0, 786436, 4, 0, 786437, 4, 0, 786440, 4, 0, 917503, 4, 0, 851968, 4, 0, 851969, 4, 0, 983039, 4, 0, 917504, 4, 0, 917505, 4, 0, 917506, 4, 0, 1048574, 4, 0, 1048575, 4, 0, 983040, 4, 0, 983041, 4, 0, 1114111, 4, 0, 1048576, 4, 0, 1048577, 4, 0 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 56, 88 )
+current = true
+
+[node name="Stone2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 72 )
+
+[node name="Stone9" parent="." instance=ExtResource( 2 )]
+position = Vector2( -72, 168 )
+
+[node name="Stone11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, 24 )
+
+[node name="Stone14" parent="." instance=ExtResource( 2 )]
+position = Vector2( 136, 72 )
+
+[node name="Stone13" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8, 40 )
+
+[node name="Stone12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 40 )
+
+[node name="Stone7" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8, 88 )
+
+[node name="Stone8" parent="." instance=ExtResource( 2 )]
+position = Vector2( 24, 104 )
+
+[node name="Splatter" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 32, 80 )
+init_color = 2
+
+[node name="Splatter9" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( -16, 48 )
+init_color = 1
+
+[node name="Splatter3" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 64, 16 )
+init_color = 2
+
+[node name="Splatter11" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 80, -48 )
+init_color = 1
+
+[node name="Splatter8" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 128, 80 )
+init_color = 1
+
+[node name="Splatter15" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 96, 32 )
+init_color = 2
+
+[node name="Splatter13" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( -16, 32 )
+init_color = 3
+
+[node name="Splatter12" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( -16, 128 )
+init_color = 2
+
+[node name="Splatter14" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 0, 112 )
+init_color = 2
+
+[node name="Splatter10" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 32, 64 )
+init_color = 3
+
+[node name="Splatter5" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 64, -32 )
+init_color = 3
+
+[node name="Splatter7" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 16, 48 )
+init_color = 3
+
+[node name="Splatter6" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 48, 32 )
+init_color = 2
+
+[node name="Splatter4" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 80, 16 )
+init_color = 3
+
+[node name="Splatter2" parent="Stone8" instance=ExtResource( 9 )]
+position = Vector2( 0, 16 )
+init_color = 1
+
+[node name="Stone3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 72, 56 )
+
+[node name="Stone5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 8, 200 )
+
+[node name="Stone4" parent="." instance=ExtResource( 2 )]
+position = Vector2( -56, 136 )
+
+[node name="Stone10" parent="." instance=ExtResource( 2 )]
+position = Vector2( -40, 184 )
+
+[node name="Stone6" parent="." instance=ExtResource( 2 )]
+position = Vector2( 56, 88 )
+
+[node name="CrystalBlue" parent="." instance=ExtResource( 4 )]
+position = Vector2( 72, 40 )
+
+[node name="CrystalOrange" parent="." instance=ExtResource( 5 )]
+position = Vector2( 24, 200 )
+
+[node name="Coin" parent="." instance=ExtResource( 7 )]
+position = Vector2( 136, 168 )
+
+[node name="Coin2" parent="." instance=ExtResource( 7 )]
+position = Vector2( 88, 24 )
+
+[node name="Coin4" parent="." instance=ExtResource( 7 )]
+position = Vector2( -24, 152 )
+
+[node name="Coin3" parent="." instance=ExtResource( 7 )]
+position = Vector2( 24, 248 )
+
+[node name="Player" parent="." instance=ExtResource( 3 )]
+position = Vector2( 56, 120 )
+
+[node name="PaintAreaContainer" parent="." instance=ExtResource( 6 )]
+top_left = Vector2( -56, -56 )
+bottom_right = Vector2( 192, 256 )
+
+[node name="Fence" parent="." instance=ExtResource( 8 )]
+tile_data = PoolIntArray( -65530, 0, 196608, 4, 0, 196608, 327689, 0, 196608, 458751, 0, 0, 393226, 0, 196608, 524287, 0, 131072, 458759, 0, 196608, 524296, 0, 196608, 589834, 0, 0, 720894, 0, 196609, 720895, 0, 196611, 655367, 0, 196608, 655370, 0, 131072, 786436, 0, 196608, 786440, 0, 196608, 917503, 0, 196608, 917506, 0, 196608, 1048574, 0, 196608, 1048576, 0, 196609, 1048577, 0, 196611 )
+
+[node name="CrystalYellow" parent="." instance=ExtResource( 10 )]
+position = Vector2( 88, 152 )
