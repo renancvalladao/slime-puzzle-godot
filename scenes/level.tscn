@@ -71,4 +71,5 @@ init_color = 1
 [node name="Sprite2" type="Sprite" parent="PaintAreaContainer/Splatter"]
 texture = ExtResource( 12 )
 
+[connection signal="level_select" from="HUD" to="." method="level_select"]
 [connection signal="reset_game" from="HUD" to="." method="reset_game"]
