@@ -1,0 +1,227 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://scenes/level_button.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/levels/level_01.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/levels/level_02.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/levels/level_04.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/levels/level_05.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/levels/level_06.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/levels/level_03.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/levels/level_07.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/levels/level_08.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/levels/level_09.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/levels/level_10.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/levels/level_11.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/levels/level_12.tscn" type="PackedScene" id=13]
+[ext_resource path="res://scenes/levels/level_13.tscn" type="PackedScene" id=14]
+[ext_resource path="res://scenes/levels/level_14.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/levels/level_15.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/levels/level_16.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/levels/level_17.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/levels/level_18.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/levels/level_19.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/levels/level_20.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/levels/level_21.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/levels/level_22.tscn" type="PackedScene" id=23]
+
+[node name="LevelSelector" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="LevelButton" parent="." instance=ExtResource( 1 )]
+margin_left = 9.0
+margin_top = 8.0
+margin_right = 37.0
+margin_bottom = 28.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "01"
+scene = ExtResource( 2 )
+
+[node name="LevelButton5" parent="." instance=ExtResource( 1 )]
+margin_left = 45.0
+margin_top = 8.0
+margin_right = 73.0
+margin_bottom = 28.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "02"
+scene = ExtResource( 3 )
+
+[node name="LevelButton4" parent="." instance=ExtResource( 1 )]
+margin_left = 78.0
+margin_top = 8.0
+margin_right = 106.0
+margin_bottom = 28.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "03"
+scene = ExtResource( 7 )
+
+[node name="LevelButton3" parent="." instance=ExtResource( 1 )]
+margin_left = 114.0
+margin_top = 8.0
+margin_right = 142.0
+margin_bottom = 28.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "04"
+scene = ExtResource( 4 )
+
+[node name="LevelButton2" parent="." instance=ExtResource( 1 )]
+margin_left = 9.0
+margin_top = 32.0
+margin_right = 37.0
+margin_bottom = 52.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "05"
+scene = ExtResource( 5 )
+
+[node name="LevelButton6" parent="." instance=ExtResource( 1 )]
+margin_left = 45.0
+margin_top = 32.0
+margin_right = 73.0
+margin_bottom = 52.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "06"
+scene = ExtResource( 6 )
+
+[node name="LevelButton7" parent="." instance=ExtResource( 1 )]
+margin_left = 78.0
+margin_top = 32.0
+margin_right = 106.0
+margin_bottom = 52.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "07"
+scene = ExtResource( 8 )
+
+[node name="LevelButton8" parent="." instance=ExtResource( 1 )]
+margin_left = 114.0
+margin_top = 32.0
+margin_right = 142.0
+margin_bottom = 52.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "08"
+scene = ExtResource( 9 )
+
+[node name="LevelButton9" parent="." instance=ExtResource( 1 )]
+margin_left = 9.00001
+margin_top = 55.0
+margin_right = 37.0
+margin_bottom = 75.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "09"
+scene = ExtResource( 10 )
+
+[node name="LevelButton10" parent="." instance=ExtResource( 1 )]
+margin_left = 45.0
+margin_top = 55.0
+margin_right = 73.0
+margin_bottom = 75.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "10"
+scene = ExtResource( 11 )
+
+[node name="LevelButton11" parent="." instance=ExtResource( 1 )]
+margin_left = 78.0
+margin_top = 55.0
+margin_right = 106.0
+margin_bottom = 75.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "11"
+scene = ExtResource( 12 )
+
+[node name="LevelButton12" parent="." instance=ExtResource( 1 )]
+margin_left = 114.0
+margin_top = 55.0
+margin_right = 142.0
+margin_bottom = 75.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "12"
+scene = ExtResource( 13 )
+
+[node name="LevelButton13" parent="." instance=ExtResource( 1 )]
+margin_left = 9.00001
+margin_top = 79.0
+margin_right = 37.0
+margin_bottom = 99.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "13"
+scene = ExtResource( 14 )
+
+[node name="LevelButton14" parent="." instance=ExtResource( 1 )]
+margin_left = 45.0
+margin_top = 79.0
+margin_right = 73.0
+margin_bottom = 99.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "14"
+scene = ExtResource( 15 )
+
+[node name="LevelButton15" parent="." instance=ExtResource( 1 )]
+margin_left = 78.0
+margin_top = 79.0
+margin_right = 106.0
+margin_bottom = 99.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "15"
+scene = ExtResource( 16 )
+
+[node name="LevelButton16" parent="." instance=ExtResource( 1 )]
+margin_left = 114.0
+margin_top = 79.0
+margin_right = 142.0
+margin_bottom = 99.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "16"
+scene = ExtResource( 17 )
+
+[node name="LevelButton17" parent="." instance=ExtResource( 1 )]
+margin_left = 9.0
+margin_top = 104.0
+margin_right = 37.0
+margin_bottom = 124.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "17"
+scene = ExtResource( 18 )
+
+[node name="LevelButton18" parent="." instance=ExtResource( 1 )]
+margin_left = 45.0
+margin_top = 104.0
+margin_right = 73.0
+margin_bottom = 124.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "18"
+scene = ExtResource( 19 )
+
+[node name="LevelButton19" parent="." instance=ExtResource( 1 )]
+margin_left = 78.0
+margin_top = 104.0
+margin_right = 106.0
+margin_bottom = 124.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "19"
+scene = ExtResource( 20 )
+
+[node name="LevelButton20" parent="." instance=ExtResource( 1 )]
+margin_left = 114.0
+margin_top = 104.0
+margin_right = 142.0
+margin_bottom = 124.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "20"
+scene = ExtResource( 21 )
+
+[node name="LevelButton21" parent="." instance=ExtResource( 1 )]
+margin_left = 9.00001
+margin_top = 128.0
+margin_right = 37.0
+margin_bottom = 148.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "21"
+scene = ExtResource( 22 )
+
+[node name="LevelButton22" parent="." instance=ExtResource( 1 )]
+margin_left = 45.0
+margin_top = 128.0
+margin_right = 73.0
+margin_bottom = 148.0
+rect_scale = Vector2( 0.75, 0.75 )
+text = "22"
+scene = ExtResource( 23 )
