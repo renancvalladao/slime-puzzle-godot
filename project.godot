@@ -11,7 +11,7 @@ config_version=4
 [application]
 
 config/name="Slime Puzzle"
-run/main_scene="res://scenes/level.tscn"
+run/main_scene="res://scenes/level_selector.tscn"
 boot_splash/fullsize=false
 config/icon="res://icon.png"
 
