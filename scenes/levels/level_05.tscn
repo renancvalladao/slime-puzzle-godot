@@ -1,21 +1,26 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/water.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/coin.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/paint_area_container.tscn" type="PackedScene" id=4]
 [ext_resource path="res://scenes/floor.tscn" type="PackedScene" id=5]
 [ext_resource path="res://scenes/fence.tscn" type="PackedScene" id=6]
 [ext_resource path="res://scenes/crystal_blue.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/crystal_orange.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/hud.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scripts/level.gd" type="Script" id=10]
 
 [node name="Level2" type="Node2D"]
+script = ExtResource( 10 )
 
 [node name="Floor" parent="." instance=ExtResource( 5 )]
 tile_data = PoolIntArray( -131067, 4, 0, -1, 4, 0, -65536, 4, 0, -65535, 4, 0, -65534, 4, 0, -65533, 4, 0, -65532, 4, 0, -65531, 4, 0, -65530, 4, 0, -65529, 4, 0, 65535, 4, 0, 0, 4, 0, 1, 4, 0, 2, 4, 0, 3, 4, 0, 4, 4, 0, 5, 4, 0, 6, 4, 0, 7, 4, 0, 65536, 4, 0, 65537, 4, 0, 65538, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 196607, 4, 0, 131072, 4, 0, 131073, 4, 0, 131074, 4, 0, 131075, 4, 0, 131076, 4, 0, 131077, 4, 0, 131078, 4, 0, 131079, 4, 0, 196608, 4, 0, 196609, 4, 0, 196610, 4, 0, 196611, 4, 0, 196612, 4, 0, 196613, 4, 0, 196614, 4, 0, 262144, 4, 0, 262145, 4, 0, 262146, 4, 0, 262147, 4, 0, 262148, 4, 0, 262149, 4, 0, 262150, 4, 0, 262151, 4, 0, 393215, 4, 0, 327680, 4, 0, 327681, 4, 0, 327682, 4, 0, 327683, 4, 0, 327684, 4, 0, 327685, 4, 0, 327686, 4, 0, 327687, 4, 0, 393216, 4, 0, 393217, 4, 0, 393219, 4, 0, 393220, 4, 0, 393221, 4, 0, 393222, 4, 0, 393223, 4, 0, 524287, 4, 0, 458752, 4, 0, 458753, 4, 0, 458755, 4, 0, 458756, 4, 0, 458757, 4, 0, 458758, 4, 0, 458759, 4, 0, 589823, 4, 0, 524288, 4, 0, 524289, 4, 0, 524290, 4, 0, 524291, 4, 0, 524292, 4, 0, 524293, 4, 0, 524294, 4, 0, 589824, 4, 0, 589825, 4, 0, 589826, 4, 0, 589827, 4, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 655360, 4, 0, 655361, 4, 0, 655362, 4, 0, 655363, 4, 0, 655364, 4, 0, 655365, 4, 0, 720897, 4, 0, 720898, 4, 0 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2( 56, 80 )
+position = Vector2( 56, 69 )
 current = true
+zoom = Vector2( 1, 1.1 )
 
 [node name="CrystalBlue" parent="." instance=ExtResource( 7 )]
 position = Vector2( 24, 152 )
@@ -44,9 +49,50 @@ position = Vector2( 72, 24 )
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 24, 120 )
 
-[node name="PaintAreaContainer" parent="." instance=ExtResource( 4 )]
-top_left = Vector2( 8, 8 )
-bottom_right = Vector2( 104, 168 )
-
 [node name="Fence" parent="." instance=ExtResource( 6 )]
 tile_data = PoolIntArray( -131067, 0, 196608, -1, 0, 1, -65536, 0, 196611, -65533, 0, 196608, -65529, 0, 0, 65535, 0, 131072, 6, 0, 196609, 7, 0, 65539, 65537, 0, 196608, 65543, 0, 65536, 196607, 0, 196608, 131079, 0, 131072, 196610, 0, 196608, 262144, 0, 196608, 262148, 0, 196608, 262151, 0, 0, 393215, 0, 196608, 327687, 0, 65536, 393217, 0, 196608, 393221, 0, 196608, 393223, 0, 65536, 524287, 0, 0, 458759, 0, 131072, 589823, 0, 131072, 524291, 0, 196608, 589824, 0, 0, 589829, 0, 1, 589830, 0, 196611, 655360, 0, 131072, 655364, 0, 196609, 655365, 0, 131075, 720897, 0, 196609, 720898, 0, 196611 )
+
+[node name="Water" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, 120 )
+
+[node name="Water2" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, 104 )
+
+[node name="Water3" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 56 )
+
+[node name="Water4" parent="." instance=ExtResource( 2 )]
+position = Vector2( 120, 136 )
+
+[node name="Water5" parent="." instance=ExtResource( 2 )]
+position = Vector2( 56, 184 )
+
+[node name="Water6" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8, 104 )
+
+[node name="Water7" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8, 56 )
+
+[node name="Water8" parent="." instance=ExtResource( 2 )]
+position = Vector2( -8, 24 )
+
+[node name="Water9" parent="." instance=ExtResource( 2 )]
+position = Vector2( 24, -24 )
+
+[node name="Water10" parent="." instance=ExtResource( 2 )]
+position = Vector2( 40, -24 )
+
+[node name="Water11" parent="." instance=ExtResource( 2 )]
+position = Vector2( 72, -24 )
+
+[node name="Water12" parent="." instance=ExtResource( 2 )]
+position = Vector2( 104, -24 )
+
+[node name="PaintAreaContainer" parent="." instance=ExtResource( 4 )]
+top_left = Vector2( -8, -8 )
+bottom_right = Vector2( 104, 168 )
+
+[node name="HUD" parent="." instance=ExtResource( 9 )]
+
+[connection signal="level_select" from="HUD" to="." method="level_select"]
+[connection signal="reset_game" from="HUD" to="." method="reset_game"]
