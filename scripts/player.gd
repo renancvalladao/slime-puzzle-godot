@@ -24,6 +24,9 @@ onready var sprite: Sprite = $Sprite
 onready var ray_cast: RayCast2D = $RayCast2D
 
 func _physics_process(_delta: float) -> void:
+	if velocity == Vector2.ZERO:
+		position = position.snapped(Vector2(tile_size / 2, tile_size / 2))
+
 	if velocity.x > 0:
 		sprite.flip_h = false
 	elif velocity.x < 0:
@@ -31,7 +34,6 @@ func _physics_process(_delta: float) -> void:
 	
 	if ray_cast.is_colliding():
 		velocity = Vector2.ZERO
-		position = position.snapped(Vector2(tile_size / 2, tile_size / 2))
 	else:
 		velocity = move_and_slide(velocity)
 	if dead:
