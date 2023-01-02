@@ -85,6 +85,9 @@ func change_color(new_color) -> void:
 			ray_cast.set_collision_mask_bit(color + 3, true)
 	color = new_color
 
+func stop_movement() -> void:
+	velocity = Vector2.ZERO
+
 func get_color():
 	return color
 
