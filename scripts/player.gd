@@ -72,6 +72,9 @@ func _unhandled_input(event: InputEvent) -> void:
 func change_color(new_color) -> void:
 	if color == new_color:
 		return
+	if new_color == Util.Colors.NO_COLOR:
+		for utilColor in Util.Colors:
+			ray_cast.set_collision_mask_bit(Util.Colors[utilColor] + 3, false)
 	if color == Util.Colors.NO_COLOR:
 		for utilColor in Util.Colors:
 			ray_cast.set_collision_mask_bit(Util.Colors[utilColor] + 3, true)

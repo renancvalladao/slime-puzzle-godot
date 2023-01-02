@@ -18,7 +18,6 @@ func _ready():
 func _body_entered(other: Node):
 	if (other.has_method("change_color")):
 		other.change_color(color)
-		disconnect("body_entered", self, "_body_entered")
 
 func set_color(_color):
 	color = _color

@@ -12,7 +12,7 @@ func _body_entered(other: Node):
 		if color != Util.Colors.NO_COLOR:
 			var splatter_node = splatter.instance()
 			splatter_node.position = position
-			splatter_node.set_color(color)
+			splatter_node.init_color = color
 			var parent = get_parent()
 			parent.call_deferred("add_child", splatter_node)
 			queue_free()
